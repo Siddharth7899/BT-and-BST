@@ -159,10 +159,12 @@ void TreeTraversal(TreeNode* root){
       preorder.push_back(node.first->data);
       node.second++;
       st.push(node);
+      if(node.first->left!=NULL) st.push({node.first->left,1});
     }else if(node.second==2){
       inorder.push_back(node.first->data);
       node.second++;
       st.push(node);
+      if(node.first->right!=NULL) st.push({node.first->right,1});
     }else postorder.push_back(node.first->data);
   }
 }
