@@ -179,7 +179,8 @@ vector<vector<int>> BFS(TreeNode* root){
   q.push(root);
   while(!q.empty()){
     vector<int> temp;
-    for(int i=0 ; i<q.size() ; i++){
+    int sz = q.size();
+    for(int i=0 ; i<sz ; i++){
       TreeNode* curr = q.front();
       temp.push_back(curr->data);
       q.pop();
